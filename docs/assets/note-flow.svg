@@ -1,0 +1,100 @@
+<svg viewBox="0 0 820 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="研学笔记本「笔记整理」功能前后端数据流" style="width:100%;height:auto;display:block">
+  <defs>
+    <marker id="nf-arq" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto-start-reverse">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#7d9077"/>
+    </marker>
+    <filter id="nf-rough" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="23" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3"/>
+    </filter>
+  </defs>
+  <style>
+    .nf-band{stroke:#C9B48A;stroke-width:1.4;stroke-dasharray:1 6;stroke-linecap:round}
+    .nf-bx{fill:rgba(251,248,241,.94);stroke-width:1.6;filter:url(#nf-rough)}
+    .nf-chip{fill:rgba(245,240,228,.9);stroke:#C9B48A;stroke-width:1.1}
+    .nf-bt{font-family:"ZCOOL XiaoWei",serif;font-size:16px;fill:#2e4438;letter-spacing:2px}
+    .nf-cs{font-family:"LXGW WenKai Screen",sans-serif;font-size:12px;fill:#56705f}
+    .nf-ly{font-family:"ZCOOL XiaoWei",serif;font-size:15px;letter-spacing:4px}
+    .nf-fl{stroke:#7d9077;stroke-width:1.6;fill:none;opacity:.85}
+    .nf-tg{font-family:"LXGW WenKai Screen",sans-serif;font-size:11px;fill:#7a5a30;letter-spacing:.3px;paint-order:stroke;stroke:#fbf8f1;stroke-width:4px;stroke-linejoin:round}
+  </style>
+
+  <!-- 前后端分区 -->
+  <rect class="nf-band" x="16" y="30" width="788" height="170" rx="20" style="fill:rgba(168,200,216,.10)"/>
+  <rect class="nf-band" x="16" y="322" width="788" height="170" rx="20" style="fill:rgba(122,158,110,.09)"/>
+  <text class="nf-ly" x="30" y="22" style="fill:#5d8296">前端 · PyQt 界面</text>
+  <text class="nf-ly" x="30" y="518" style="fill:#5d8154">后端 · Python 业务逻辑</text>
+
+  <!-- 前端 -->
+  <rect class="nf-bx" x="40" y="70" width="150" height="104" rx="14" stroke="#7fa5ba"/>
+  <text class="nf-bt" x="115" y="96" text-anchor="middle">笔记列表</text>
+  <rect class="nf-chip" x="58" y="110" width="114" height="24" rx="7"/><text class="nf-cs" x="115" y="127" text-anchor="middle">笔记主题</text>
+  <rect class="nf-chip" x="58" y="140" width="114" height="24" rx="7"/><text class="nf-cs" x="115" y="157" text-anchor="middle">笔记时间</text>
+
+  <rect class="nf-bx" x="222" y="70" width="150" height="104" rx="14" stroke="#7fa5ba"/>
+  <text class="nf-bt" x="297" y="96" text-anchor="middle">笔记主题信息</text>
+  <rect class="nf-chip" x="240" y="110" width="114" height="24" rx="7"/><text class="nf-cs" x="297" y="127" text-anchor="middle">笔记主题</text>
+  <rect class="nf-chip" x="240" y="140" width="114" height="24" rx="7"/><text class="nf-cs" x="297" y="157" text-anchor="middle">笔记时间</text>
+
+  <rect class="nf-bx" x="404" y="70" width="252" height="104" rx="14" stroke="#7fa5ba"/>
+  <text class="nf-bt" x="530" y="96" text-anchor="middle">笔记内容信息</text>
+  <rect class="nf-chip" x="418" y="118" width="70" height="30" rx="7"/><text class="nf-cs" x="453" y="138" text-anchor="middle">关键词</text>
+  <rect class="nf-chip" x="495" y="118" width="70" height="30" rx="7"/><text class="nf-cs" x="530" y="138" text-anchor="middle">内容</text>
+  <rect class="nf-chip" x="572" y="118" width="70" height="30" rx="7"/><text class="nf-cs" x="607" y="138" text-anchor="middle">配图</text>
+
+  <rect class="nf-bx" x="690" y="70" width="100" height="104" rx="14" stroke="#7fa5ba"/>
+  <text class="nf-bt" x="740" y="112" text-anchor="middle">导出笔记</text>
+  <text class="nf-cs" x="740" y="138" text-anchor="middle">导出按钮</text>
+
+  <!-- 后端 -->
+  <rect class="nf-bx" x="40" y="362" width="150" height="104" rx="14" stroke="#7A9E6E"/>
+  <text class="nf-bt" x="115" y="388" text-anchor="middle">采集输入</text>
+  <rect class="nf-chip" x="58" y="402" width="114" height="24" rx="7"/><text class="nf-cs" x="115" y="419" text-anchor="middle">文字识别</text>
+  <rect class="nf-chip" x="58" y="432" width="114" height="24" rx="7"/><text class="nf-cs" x="115" y="449" text-anchor="middle">语音识别</text>
+
+  <rect class="nf-bx" x="222" y="362" width="150" height="104" rx="14" stroke="#A67B4F" style="fill:rgba(201,180,138,.14)"/>
+  <text class="nf-bt" x="297" y="388" text-anchor="middle">AIGC 加工</text>
+  <rect class="nf-chip" x="240" y="414" width="114" height="28" rx="7"/><text class="nf-cs" x="297" y="433" text-anchor="middle">文心千帆生成内容</text>
+
+  <rect class="nf-bx" x="404" y="362" width="252" height="104" rx="14" stroke="#7A9E6E"/>
+  <text class="nf-bt" x="530" y="388" text-anchor="middle">本地存储 · YAML</text>
+  <rect class="nf-chip" x="424" y="410" width="100" height="30" rx="7"/><text class="nf-cs" x="474" y="430" text-anchor="middle">笔记列表</text>
+  <rect class="nf-chip" x="536" y="410" width="100" height="30" rx="7"/><text class="nf-cs" x="586" y="430" text-anchor="middle">笔记内容</text>
+
+  <rect class="nf-bx" x="690" y="362" width="100" height="104" rx="14" stroke="#7A9E6E"/>
+  <text class="nf-bt" x="740" y="388" text-anchor="middle">导出笔记</text>
+  <rect class="nf-chip" x="700" y="402" width="80" height="24" rx="7"/><text class="nf-cs" x="740" y="419" text-anchor="middle">生成 HTML</text>
+  <rect class="nf-chip" x="700" y="432" width="80" height="24" rx="7"/><text class="nf-cs" x="740" y="449" text-anchor="middle">邮件发送</text>
+
+  <!-- 数据流 -->
+  <path class="nf-fl" d="M70,70 L70,50 L160,50 L160,68" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="115" y="46" text-anchor="middle">① 新建笔记</text>
+  <path class="nf-fl" d="M192,122 L220,122" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="206" y="62" text-anchor="middle">② 编写</text>
+  <path class="nf-fl" d="M374,122 L402,122" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="388" y="62" text-anchor="middle">③ 添加关键词</text>
+
+  <path class="nf-fl" d="M70,176 L70,300 L440,300 L440,360" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="250" y="294" text-anchor="middle">存储笔记列表</text>
+
+  <path class="nf-fl" d="M453,150 L453,250 L140,250 L140,360" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="300" y="244" text-anchor="middle">④ 拍照或语音输入关键词</text>
+  <path class="nf-fl" d="M192,414 L220,414" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="206" y="484" text-anchor="middle">⑤ 按关键词生成</text>
+  <path class="nf-fl" d="M374,414 L402,414" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="388" y="484" text-anchor="middle">⑥ 存储</text>
+
+  <path class="nf-fl" d="M520,360 L520,226 L486,226 L486,152" marker-end="url(#nf-arq)"/>
+  <path class="nf-fl" d="M545,360 L545,152" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="560" y="270">⑦ 回显关键词</text>
+  <text class="nf-tg" x="560" y="286">与生成内容</text>
+
+  <path class="nf-fl" d="M630,150 L630,360" marker-end="url(#nf-arq)"/>
+  <path class="nf-fl" d="M642,120 C668,96 668,150 644,140" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="640" y="320" text-anchor="end">⑧ 拍照配图并存入</text>
+
+  <path class="nf-fl" d="M740,176 L740,360" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="748" y="270">⑨ 导出</text>
+  <path class="nf-fl" d="M658,436 L688,436" marker-end="url(#nf-arq)"/>
+  <text class="nf-tg" x="673" y="484" text-anchor="middle">⑩ 读取内容</text>
+</svg>

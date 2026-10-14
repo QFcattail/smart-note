@@ -1,0 +1,14 @@
+pyqt5
+requests
+markdown
+opencv-python
+pyaudio
+pywifi
+comtypes; sys_platform == "win32"
+pyyaml
+beautifulsoup4
+qdarkstyle
+pyee>=9
+pyzbar
+pillow
+aiohttp
